@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+      content="width=device-width,initial-scale=1">
+
+<title>MHIU1202</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:#050805;
+    color:#effff2;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+.wrap{
+    max-width:650px;
+    margin:auto;
+    padding:20px 14px 40px;
+}
+
+.logo{
+    text-align:center;
+    margin:20px 0;
+}
+
+.logo h1{
+    margin:0;
+    color:#35ed78;
+}
+
+.logo p{
+    color:#8ea894;
+    font-size:12px;
+}
+
+.card{
+    background:#0b110d;
+    border:1px solid #1d3823;
+    border-radius:18px;
+    padding:16px;
+    margin-bottom:14px;
+}
+
+label{
+    display:block;
+    margin:13px 0 7px;
+    font-size:13px;
+    font-weight:800;
+}
+
+input,select,button{
+    width:100%;
+    padding:13px;
+    border-radius:12px;
+    font-size:14px;
+}
+
+input,select{
+    background:#050805;
+    color:#effff2;
+    border:1px solid #24462b;
+    outline:none;
+}
+
+button{
+    margin-top:10px;
+    border:0;
+    background:#35ed78;
+    color:#031007;
+    font-weight:900;
+}
+
+button.secondary{
+    background:#121a14;
+    color:#effff2;
+    border:1px solid #29472f;
+}
+
+button.danger{
+    background:#321014;
+    color:#ff9ca4;
+}
+
+.hidden{
+    display:none;
+}
+
+.key-item{
+    padding:13px;
+    margin-top:10px;
+    border:1px solid #203b26;
+    border-radius:13px;
+    background:#070b08;
+}
+
+.key{
+    color:#8dffad;
+    font-family:monospace;
+    font-weight:900;
+}
+
+.meta{
+    color:#8ea894;
+    font-size:12px;
+    line-height:1.7;
+    margin-top:7px;
+}
+
+.good{
+    color:#35ed78;
+}
+
+.bad{
+    color:#ff5964;
+}
+
+.warn{
+    color:#ffc857;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="logo">
+    <h1>🟢 MHIU1202</h1>
+    <p>KEY AUTHENTICATION DEMO</p>
+</div>
+
+
+<!-- =========================
+     LOGIN
+========================= -->
+
+<section id="loginScreen">
+
+<div class="card">
+
+    <b>👤 USER KEY</b>
+
+    <label>Nhập User Key</label>
+
+    <input
+        id="userKey"
+        type="text"
+        placeholder="MHIU-XXXXXXXXXXX"
+        autocomplete="off">
+
+    <button id="userLogin">
+        🔓 VÀO TOOL
+    </button>
+
+    <div id="userMessage"
+         class="meta"></div>
+
+</div>
+
+
+<div class="card">
+
+    <b>👑 ADMIN KEY</b>
+
+    <label>Nhập Admin Key</label>
+
+    <input
+        id="adminKey"
+        type="password"
+        placeholder="Admin Key"
+        autocomplete="off">
+
+    <button id="adminLogin">
+        👑 VÀO ADMIN
+    </button>
+
+    <div id="adminMessage"
+         class="meta"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TOOL DEMO
+========================= -->
+
+<section
+    id="toolScreen"
+    class="hidden">
+
+<div class="card">
+
+    <h2>🟢 HEX OFFSET TOOL</h2>
+
+    <p class="meta">
+        
+        <!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050805">
+<title>HEX Offset Tool</title>
+<style>
+:root{--bg:#050805;--card:#0b110d;--card2:#0e1710;--line:#1d3823;--g:#35ed78;--g2:#19b85a;--txt:#effff2;--muted:#8ea894;--red:#ff5964;--amber:#ffc857}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#112719,#050805 48%,#030503);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:780px;margin:auto;padding:16px 14px 45px}.hero{padding:14px 4px 18px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border:1px solid #2b6b3e;border-radius:15px;background:#0b2112;display:grid;place-items:center;color:var(--g);font-weight:900;box-shadow:0 0 28px #35ed7818}
+h1{margin:0;font-size:24px}.tag{color:var(--g);font:11px ui-monospace,monospace;margin-top:3px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}.tab{padding:13px;border-radius:13px;border:1px solid var(--line);background:#091009;color:#a8b9ac;font-weight:800}.tab.active{background:#10351c;color:var(--g);border-color:#2b7040}
+.card{background:linear-gradient(180deg,#0c130e,#080d09);border:1px solid var(--line);border-radius:19px;padding:16px;margin-bottom:13px;box-shadow:0 12px 35px #0008}
+label{display:block;margin:13px 0 7px;font-size:13px;font-weight:800;color:#cfe4d3}
+input[type=file],textarea{width:100%;border:1px solid #24462b;border-radius:13px;background:#050805;color:#dfffe5}input[type=file]{padding:12px;background:#091009}textarea{min-height:220px;padding:13px;resize:vertical;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;outline:none}textarea:focus{border-color:var(--g);box-shadow:0 0 0 3px #35ed7815}
+button{width:100%;border:0;border-radius:13px;padding:13px;margin-top:10px;background:var(--g);color:#031007;font-size:15px;font-weight:900;box-shadow:0 7px 20px #35ed7820}button.secondary{background:#121a14;color:#dfffe5;border:1px solid #29472f;box-shadow:none}button:disabled{opacity:.4}
+.hidden{display:none}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.stat{padding:10px;border:1px solid var(--line);border-radius:12px;background:#080e09}.stat b{display:block;color:var(--g);font-size:18px}.stat span{font-size:10px;color:var(--muted)}
+.row{margin-top:8px;padding:11px;border:1px solid #203b26;border-radius:13px;background:#070b08;font:12px/1.65 ui-monospace,monospace;overflow:auto}.good{border-left:4px solid var(--g)}.bad{border-left:4px solid var(--red)}.warn{border-left:4px solid var(--amber)}
+code{color:#8dffad;background:#0c1710;padding:2px 5px;border-radius:5px}.note{font-size:12px;line-height:1.6;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero"><div class="brand"><div class="logo">&lt;/&gt;</div><div><h1>HEX Offset Tool</h1><div class="tag">Nguyễn Minh Hiếu-LOCAL • MAKE + LEAK</div></div></div></div>
+
+<div class="tabs">
+<button id="makeTab" class="tab active">🟢 MAKE / PATCH</button>
+<button id="leakTab" class="tab">🔍 LEAK</button>
+</div>
+
+<section id="makeSection">
+<div class="card">
+<label>📁 FILE GỐC</label>
+<input id="makeFile" type="file">
+<label>🧩 OFFSET → HEX</label>
+<textarea id="rules" spellcheck="false" placeholder=""></textarea>
+<button id="makeBtn">⚡ VALIDATE & PREVIEW</button>
+</div>
+<div id="makeResult" class="card hidden">
+<b>PREVIEW THAY ĐỔI</b><div id="makeSummary" class="summary"></div><div id="makeResults"></div>
+<button id="exportBtn">⬇ EXPORT BẢN SAO ĐÃ CHỈNH SỬA</button>
+<button id="makeCopy" class="secondary">📋 COPY BÁO CÁO</button>
+</div>
+</section>
+
+<section id="leakSection" class="hidden">
+<div class="card">
+<label>📁 FILE GỐC</label><input id="origFile" type="file">
+<label>📁 FILE ĐÃ CHỈNH SỬA</label><input id="editedFile" type="file">
+<button id="compareBtn">🔍 SO SÁNH</button>
+</div>
+<div id="leakResult" class="card hidden">
+<b>🔍 KẾT QUẢ THAY ĐỔI</b>
+<div id="leakSummary" class="summary"></div>
+<div id="leakResults"></div>
+<button id="leakCopy" class="secondary">📋 COPY OFFSET → HEX</button>
+<button id="leakExport">⬇ EXPORT TXT</button>
+</div>
+</section>
+
+<div class="card note"><b style="color:#dfffe5">Lưu ý:</b> công cụ xử lý file cục bộ trên thiết bị. File gốc không bị ghi đè. Phần LEAK chỉ so sánh và hiển thị các byte khác nhau.</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const tabs=[$("makeTab"),$("leakTab")],sections=[$("makeSection"),$("leakSection")];
+function show(n){tabs.forEach((x,i)=>x.classList.toggle("active",i===n));sections.forEach((x,i)=>x.classList.toggle("hidden",i!==n))}
+$("makeTab").onclick=()=>show(0);$("leakTab").onclick=()=>show(1);
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function po(s){s=s.trim().replace(/^0x/i,"");if(!/^[0-9a-f]+$/i.test(s))return NaN;const n=parseInt(s,16);return Number.isSafeInteger(n)?n:NaN}
+function pb(s){s=s.replace(/\s+/g,"").trim();if(!s||!/^[0-9a-f]+$/i.test(s)||s.length%2)return null;const a=new Uint8Array(s.length/2);for(let i=0;i<a.length;i++)a[i]=parseInt(s.slice(i*2,i*2+2),16);return a}
+function hx(n){return n.toString(16).padStart(2,"0").toUpperCase()}
+function off(n){return"0x"+n.toString(16).toUpperCase().padStart(8,"0")}
+function hex(a){return Array.from(a,hx).join("")}
+function fmt(n){if(n<1024)return n+" B";if(n<1048576)return(n/1024).toFixed(1)+" KB";return(n/1048576).toFixed(1)+" MB"}
+
+let editedOut=null,makeReport="",leakReport="";
+
+$("makeBtn").onclick=async()=>{
+ const f=$("makeFile").files[0];if(!f){alert("Hãy chọn file gốc.");return}
+ const data=new Uint8Array(await f.arrayBuffer()),out=new Uint8Array(data);
+ let ok=0,bad=0,changed=0;makeReport="";$("makeResults").innerHTML="";
+ for(const [i,line] of $("rules").value.split(/\r?\n/).entries()){
+  const raw=line.trim();if(!raw)continue;
+  const m=raw.match(/^\s*(0x[0-9a-f]+|[0-9a-f]+)\s*=>\s*([0-9a-f\s]+)\s*$/i);
+  if(!m){bad++;$("makeResults").insertAdjacentHTML("beforeend",`<div class="row bad"><b>Dòng ${i+1}: ✗ SAI FORMAT</b><br>${esc(raw)}</div>`);continue}
+  const o=po(m[1]),b=pb(m[2]);if(!Number.isSafeInteger(o)||!b){bad++;$("makeResults").insertAdjacentHTML("beforeend",`<div class="row bad"><b>Dòng ${i+1}: ✗ OFFSET/HEX LỖI</b></div>`);continue}
+  if(o+b.length>out.length){bad++;$("makeResults").insertAdjacentHTML("beforeend",`<div class="row bad"><b>Dòng ${i+1}: ✗ VƯỢT FILE</b></div>`);continue}
+  const before=out.slice(o,o+b.length);let d=0;for(let j=0;j<b.length;j++){if(out[o+j]!==b[j])d++;out[o+j]=b[j]}ok++;changed+=d;
+  $("makeResults").insertAdjacentHTML("beforeend",`<div class="row ${d?"warn":"good"}"><b>Dòng ${i+1}: ✓ ${d} BYTE THAY</b><br><code>${off(o)}</code> · ${b.length} byte<br>Before: <code>${hex(before)}</code><br>After: <code>${hex(b)}</code></div>`);
+ }
+ editedOut={data:out,file:f};$("makeSummary").innerHTML=`<div class="stat"><b>${ok+bad}</b><span>QUY TẮC</span></div><div class="stat"><b>${ok}</b><span>HỢP LỆ</span></div><div class="stat"><b>${bad}</b><span>LỖI</span></div><div class="stat"><b>${changed}</b><span>BYTE THAY</span></div>`;
+ makeReport=`File: ${f.name}\nRules: ${ok+bad}\nValid: ${ok}\nErrors: ${bad}\nBytes changed: ${changed}`;
+$("makeResult").classList.remove("hidden");$("exportBtn").disabled=ok===0;$("makeResult").scrollIntoView({behavior:"smooth"});
+};
+
+$("exportBtn").onclick=()=>{
+ if(!editedOut)return;const f=editedOut.file,b=new Blob([editedOut.data],{type:f.type||"application/octet-stream"}),u=URL.createObjectURL(b),a=document.createElement("a"),p=f.name.lastIndexOf(".");
+ a.href=u;a.download=p>0?f.name.slice(0,p)+"_edited"+f.name.slice(p):f.name+"_edited";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);
+};
+$("makeCopy").onclick=async()=>{try{await navigator.clipboard.writeText(makeReport);$("makeCopy").textContent="✓ ĐÃ COPY";setTimeout(()=>$("makeCopy").textContent="📋 COPY BÁO CÁO",1200)}catch{}};
+
+$("compareBtn").onclick=async()=>{
+ const a=$("origFile").files[0],b=$("editedFile").files[0];if(!a||!b){alert("Hãy chọn cả file gốc và file đã chỉnh sửa.");return}
+ const A=new Uint8Array(await a.arrayBuffer()),B=new Uint8Array(await b.arrayBuffer());
+ $("leakResults").innerHTML="";let blocks=0,bytes=0;const lines=[];let i=0;
+ const max=Math.max(A.length,B.length);
+ while(i<max){
+  if(i<A.length&&i<B.length&&A[i]===B[i]){i++;continue}
+  const start=i;let vals=[];
+  while(i<max && !(i<A.length&&i<B.length&&A[i]===B[i])){if(i<B.length)vals.push(B[i]);i++}
+  if(vals.length){blocks++;bytes+=vals.length;const h=vals.map(hx).join("");lines.push(`${off(start)} => ${h}`);$("leakResults").insertAdjacentHTML("beforeend",`<div class="row good"><code>${off(start)} => ${h}</code></div>`)}
+ }
+ leakReport=lines.join("\n");$("leakSummary").innerHTML=`<div class="stat"><b>${blocks}</b><span>VÙNG THAY ĐỔI</span></div><div class="stat"><b>${bytes}</b><span>BYTE KHÁC</span></div>`;
+ $("leakResult").classList.remove("hidden");$("leakResult").scrollIntoView({behavior:"smooth"});
+};
+$("leakCopy").onclick=async()=>{try{await navigator.clipboard.writeText(leakReport);$("leakCopy").textContent="✓ ĐÃ COPY";setTimeout(()=>$("leakCopy").textContent="📋 COPY OFFSET → HEX",1200)}catch{}};
+$("leakExport").onclick=()=>{const b=new Blob([leakReport],{type:"text/plain;charset=utf-8"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="leak_offsets.txt";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+</script>
+</body>
+</html>
+
+    </p>
+
+    <button
+        class="secondary"
+        id="toolLogout">
+        🔒 ĐĂNG XUẤT
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ADMIN
+========================= -->
+
+<section
+    id="adminScreen"
+    class="hidden">
+
+
+<div class="card">
+
+    <h2>👑 ADMIN PANEL</h2>
+
+    <b>➕ TẠO USER KEY</b>
+
+    <label>User Key</label>
+
+    <input
+        id="newKey"
+        type="text"
+        placeholder="MHIU-XXXXXXXXXXX">
+
+    <button
+        class="secondary"
+        id="randomKey">
+        🎲 TẠO KEY RANDOM
+    </button>
+
+
+    <label>Thời hạn</label>
+
+    <select id="duration">
+
+        <option value="1">
+            1 ngày
+        </option>
+
+        <option value="7">
+            7 ngày
+        </option>
+
+        <option value="30"
+                selected>
+            30 ngày
+        </option>
+
+        <option value="90">
+            90 ngày
+        </option>
+
+        <option value="365">
+            365 ngày
+        </option>
+
+    </select>
+
+
+    <button id="createKey">
+        ➕ TẠO USER KEY
+    </button>
+
+</div>
+
+
+<div class="card">
+
+    <b>📋 USER KEY</b>
+
+    <div id="keyList"></div>
+
+    <button
+        class="secondary"
+        id="adminLogout">
+        🔒 ĐĂNG XUẤT ADMIN
+    </button>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =========================
+   CONFIG
+========================= */
+
+const ADMIN_KEY =
+    "nmh1202";
+
+const STORAGE =
+    "mhiu1202_demo_keys";
+
+
+/* =========================
+   STORAGE
+========================= */
+
+function getKeys(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                STORAGE
+            ) || "[]"
+        );
+
+    }catch{
+
+        return [];
+
+    }
+
+}
+
+
+function saveKeys(keys){
+
+    localStorage.setItem(
+        STORAGE,
+        JSON.stringify(keys)
+    );
+
+}
+
+
+/* =========================
+   RANDOM KEY
+========================= */
+
+function generateKey(){
+
+    const chars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    let key = "MHIU-";
+
+    for(let i=0;i<11;i++){
+
+        key +=
+            chars[
+                Math.floor(
+                    Math.random()
+                    * chars.length
+                )
+            ];
+
+    }
+
+    return key;
+
+}
+
+
+function uniqueKey(){
+
+    const keys =
+        getKeys();
+
+    let key;
+
+    do{
+
+        key =
+            generateKey();
+
+    }while(
+        keys.some(
+            x => x.key === key
+        )
+    );
+
+    return key;
+
+}
+
+
+/* =========================
+   USER LOGIN
+========================= */
+
+document
+.getElementById("userLogin")
+.onclick = function(){
+
+    const input =
+        document
+        .getElementById("userKey")
+        .value
+        .trim()
+        .toUpperCase();
+
+
+    const message =
+        document
+        .getElementById("userMessage");
+
+
+    const keys =
+        getKeys();
+
+
+    const item =
+        keys.find(
+            x => x.key === input
+        );
+
+
+    if(!item){
+
+        message.textContent =
+            "❌ User Key không tồn tại.";
+
+        message.className =
+            "meta bad";
+
+        return;
+
+    }
+
+
+    if(!item.active){
+
+        message.textContent =
+            "🚫 User Key đã bị khóa.";
+
+        message.className =
+            "meta bad";
+
+        return;
+
+    }
+
+
+    if(
+        item.expires <=
+        Date.now()
+    ){
+
+        message.textContent =
+            "⏰ User Key đã hết hạn.";
+
+        message.className =
+            "meta warn";
+
+        return;
+
+    }
+
+
+    document
+    .getElementById(
+        "loginScreen"
+    )
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById(
+        "toolScreen"
+    )
+    .classList
+    .remove("hidden");
+
+};
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+document
+.getElementById("adminLogin")
+.onclick = function(){
+
+    const input =
+        document
+        .getElementById("adminKey")
+        .value;
+
+
+    const message =
+        document
+        .getElementById(
+            "adminMessage"
+        );
+
+
+    if(input !== ADMIN_KEY){
+
+        message.textContent =
+            "❌ Admin Key không đúng.";
+
+        message.className =
+            "meta bad";
+
+        return;
+
+    }
+
+
+    document
+    .getElementById(
+        "loginScreen"
+    )
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById(
+        "adminScreen"
+    )
+    .classList
+    .remove("hidden");
+
+
+    renderKeys();
+
+};
+
+
+/* =========================
+   RANDOM
+========================= */
+
+document
+.getElementById("randomKey")
+.onclick = function(){
+
+    document
+    .getElementById("newKey")
+    .value =
+        uniqueKey();
+
+};
+
+
+/* =========================
+   CREATE
+========================= */
+
+document
+.getElementById("createKey")
+.onclick = function(){
+
+    let key =
+        document
+        .getElementById("newKey")
+        .value
+        .trim()
+        .toUpperCase();
+
+
+    if(!key){
+
+        key =
+            uniqueKey();
+
+    }
+
+
+    if(
+        !/^MHIU-[A-Z0-9]{11}$/
+        .test(key)
+    ){
+
+        alert(
+            "Key phải có dạng:\n" +
+            "MHIU-XXXXXXXXXXX"
+        );
+
+        return;
+
+    }
+
+
+    const keys =
+        getKeys();
+
+
+    if(
+        keys.some(
+            x => x.key === key
+        )
+    ){
+
+        alert(
+            "❌ Key đã tồn tại."
+        );
+
+        return;
+
+    }
+
+
+    const days =
+        Number(
+            document
+            .getElementById(
+                "duration"
+            )
+            .value
+        );
+
+
+    keys.push({
+
+        key:key,
+
+        created:
+            Date.now(),
+
+        expires:
+            Date.now()
+            +
+            days
+            *
+            86400000,
+
+        active:true
+
+    });
+
+
+    saveKeys(keys);
+
+
+    document
+    .getElementById(
+        "newKey"
+    )
+    .value = "";
+
+
+    renderKeys();
+
+
+    alert(
+        "✅ Đã tạo:\n\n" +
+        key
+    );
+
+};
+
+
+/* =========================
+   RENDER ADMIN
+========================= */
+
+function renderKeys(){
+
+    const keys =
+        getKeys();
+
+
+    const list =
+        document
+        .getElementById(
+            "keyList"
+        );
+
+
+    list.innerHTML = "";
+
+
+    if(!keys.length){
+
+        list.innerHTML =
+            `<div class="meta">
+                Chưa có User Key.
+            </div>`;
+
+        return;
+
+    }
+
+
+    keys.forEach(
+        (item,index) => {
+
+            let status;
+            let cls;
+
+
+            if(!item.active){
+
+                status =
+                    "🔴 ĐÃ KHÓA";
+
+                cls =
+                    "bad";
+
+            }else if(
+                item.expires <=
+                Date.now()
+            ){
+
+                status =
+                    "🟡 HẾT HẠN";
+
+                cls =
+                    "warn";
+
+            }else{
+
+                status =
+                    "🟢 HOẠT ĐỘNG";
+
+                cls =
+                    "good";
+
+            }
+
+
+            const box =
+                document
+                .createElement(
+                    "div"
+                );
+
+
+            box.className =
+                "key-item";
+
+
+            box.innerHTML = `
+
+                <div class="key">
+                    ${item.key}
+                </div>
+
+                <div class="meta">
+
+                    Trạng thái:
+                    <span class="${cls}">
+                        ${status}
+                    </span>
+
+                    <br>
+
+                    Hết hạn:
+                    ${
+                        new Date(
+                            item.expires
+                        ).toLocaleString(
+                            "vi-VN"
+                        )
+                    }
+
+                </div>
+
+                <button
+                    class="secondary"
+                    onclick="extendKey(${index})">
+
+                    🔄 GIA HẠN +30 NGÀY
+
+                </button>
+
+                <button
+                    class="secondary"
+                    onclick="toggleKey(${index})">
+
+                    ${
+                        item.active
+                        ? "🚫 KHÓA"
+                        : "✅ MỞ KHÓA"
+                    }
+
+                </button>
+
+                <button
+                    class="danger"
+                    onclick="deleteKey(${index})">
+
+                    🗑 XÓA
+
+                </button>
+            `;
+
+
+            list.appendChild(
+                box
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================
+   EXTEND
+========================= */
+
+window.extendKey =
+function(index){
+
+    const keys =
+        getKeys();
+
+
+    if(!keys[index])
+        return;
+
+
+    keys[index].expires =
+        Math.max(
+            Date.now(),
+            keys[index].expires
+        )
+        +
+        30
+        *
+        86400000;
+
+
+    keys[index].active =
+        true;
+
+
+    saveKeys(keys);
+
+    renderKeys();
+
+};
+
+
+/* =========================
+   TOGGLE
+========================= */
+
+window.toggleKey =
+function(index){
+
+    const keys =
+        getKeys();
+
+
+    if(!keys[index])
+        return;
+
+
+    keys[index].active =
+        !keys[index].active;
+
+
+    saveKeys(keys);
+
+    renderKeys();
+
+};
+
+
+/* =========================
+   DELETE
+========================= */
+
+window.deleteKey =
+function(index){
+
+    if(
+        !confirm(
+            "Xóa User Key này?"
+        )
+    )
+        return;
+
+
+    const keys =
+        getKeys();
+
+
+    keys.splice(
+        index,
+        1
+    );
+
+
+    saveKeys(keys);
+
+    renderKeys();
+
+};
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+document
+.getElementById("toolLogout")
+.onclick = function(){
+
+    document
+    .getElementById(
+        "toolScreen"
+    )
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById(
+        "loginScreen"
+    )
+    .classList
+    .remove("hidden");
+
+};
+
+
+document
+.getElementById("adminLogout")
+.onclick = function(){
+
+    document
+    .getElementById(
+        "adminScreen"
+    )
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById(
+        "loginScreen"
+    )
+    .classList
+    .remove("hidden");
+
+};
+
+</script>
+
+</body>
+</html>
